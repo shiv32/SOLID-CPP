@@ -2,6 +2,10 @@
 #include <exception>
 
 /*
+Objects of superclass can be should be replaceable with objects of subclass without altering the correctness of program
+*/
+
+/*
 // breakng lsp
 class Bird {
     public:

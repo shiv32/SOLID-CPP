@@ -1,6 +1,10 @@
 #include <iostream>
 
 /*
+Clients should not be forced to depend on methods that they don’t need
+*/
+
+/*
 //breaking ISP
 class IFILE
 {
@@ -10,7 +14,7 @@ class IFILE
 };
 */
 
-//follow ISP
+// follow ISP
 
 class IREAD
 {
@@ -23,7 +27,6 @@ class IWRITE
     virtual void WRITE() = 0;
     virtual ~IWRITE() = default;
 };
-
 
 int main()
 {
