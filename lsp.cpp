@@ -2,6 +2,7 @@
 #include <exception>
 	
 /*
+// breakng lsp
 class Bird {
     public:
         virtual void fly() = 0;
@@ -25,6 +26,8 @@ void makeBirdFly(Bird& bird) {
     bird.fly();
 }
 */
+
+//follow lsp
 
 class Bird {
     public:
