@@ -1,6 +1,6 @@
 #include <iostream>
 #include <exception>
-	
+
 /*
 // breakng lsp
 class Bird {
@@ -27,47 +27,55 @@ void makeBirdFly(Bird& bird) {
 }
 */
 
-//follow lsp
+// follow lsp
 
-class Bird {
-    public:
-        virtual bool canFly() = 0;
+class Bird
+{
+public:
+    virtual bool canFly() = 0;
 };
 
-class FlyingBird: public Bird {
-    public:
-        bool canFly() override {
-            return true;
-        }
-        virtual void fly() = 0;
+class FlyingBird : public Bird
+{
+public:
+    bool canFly() override
+    {
+        return true;
+    }
+    virtual void fly() = 0;
 };
 
-class Crow : public FlyingBird {
-    public:
-        void fly() override {
-            std::cout << "Crow is flying" << std::endl;
-        }
+class Crow : public FlyingBird
+{
+public:
+    void fly() override
+    {
+        std::cout << "Crow is flying" << std::endl;
+    }
 };
 
-class Penguin : public Bird {
-    public:
-        bool canFly() override {
-            return false;
-        }
+class Penguin : public Bird
+{
+public:
+    bool canFly() override
+    {
+        return false;
+    }
 };
 
-void makeBirdFly(FlyingBird& bird) {
+void makeBirdFly(FlyingBird &bird)
+{
     bird.fly();
 }
 
 int main()
 {
 
-Crow cr;
-makeBirdFly(cr);
+    Crow cr;
+    makeBirdFly(cr);
 
-Penguin pn;
-//makeBirdFly(pn);  //compile time error
+    Penguin pn;
+    // makeBirdFly(pn);  //compile time error
 
     return 0;
 }
