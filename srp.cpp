@@ -17,25 +17,22 @@ void DISPLAY(){};
 };
 */
 
-
 class NOTES
 {
 public:
-void ADD(){};
-void REMOVE(){};
-void EDIT(){};
+    void ADD(){};
+    void REMOVE(){};
+    void EDIT(){};
 };
 
 class VIEW
 {
 public:
-void DISPLAY(NOTES *np){};
+    void DISPLAY(NOTES *np){};
 };
-
 
 int main()
 {
-
 
     return 0;
 }

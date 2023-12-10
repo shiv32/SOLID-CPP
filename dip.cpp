@@ -1,8 +1,8 @@
-#include <iostream>
-
 /*
 Abstractions should not depend on details. Details should depend on abstractions.
 */
+
+#include <iostream>
 
 /*
 class LightBulb {

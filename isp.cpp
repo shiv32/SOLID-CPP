@@ -1,8 +1,8 @@
-#include <iostream>
-
 /*
 Clients should not be forced to depend on methods that they don’t need
 */
+
+#include <iostream>
 
 /*
 //breaking ISP
