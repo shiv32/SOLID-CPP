@@ -27,7 +27,8 @@ void EDIT(){};
 class NOTES
 {
 public:
-    virtual void ADD(){
+    virtual void ADD()
+    {
 
     };
     void REMOVE(){};
