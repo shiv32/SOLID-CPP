@@ -3,56 +3,46 @@
 */
 
 #include <iostream>
+#include <memory>
 
 /*
 //violate OCP
 
-class NOTES
+class Notes
 {
 public:
-void ADD()
-{
-//    if(contain('#'))
-//    {
-
-
-//    }
-
+    void Add();
 };
-void REMOVE(){};
-void EDIT(){};
-};
+
 */
 
-class NOTES
+class Notes
 {
 public:
-    virtual void ADD()
-    {
-
-    };
-    void REMOVE(){};
-    void EDIT(){};
+    virtual void Add();
 };
 
+void Notes::Add()
+{
+    std::cout << "Add in Note class." << std::endl;
+}
+
+class AddContact : public Notes
 {
 public:
-    void DISPLAY(NOTES * np){};
+    void Add() override;
 };
-class SPECIALNOTES : public NOTES
-{
-public:
-    void ADD() override
-    {
-        //    if(contain('#'))
-        //    {
 
-        //    }
-    }
-};
+void AddContact::Add()
+{
+    std::cout << "Add extended in AddContact class." << std::endl;
+}
 
 int main()
 {
-
+    std::unique_ptr<Notes> np = std::make_unique<Notes>();
+    std::unique_ptr<AddContact> ap = std::make_unique<AddContact>();
+    np->Add();
+    ap->Add();
     return 0;
 }
