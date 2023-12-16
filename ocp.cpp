@@ -12,7 +12,7 @@ class Notes
 {
 public:
     void Add();
-    virtual ~Notes() = default;
+    ~Notes() = default;
 };
 
 */
