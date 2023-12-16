@@ -15,6 +15,7 @@ public:
     virtual void Remove() = 0;
     virtual void Edit() = 0;
     virtual void Display() = 0;
+    virtual ~Notes() = default;
 };
 
 */
