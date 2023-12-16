@@ -20,6 +20,7 @@ class Notes
 {
 public:
     virtual void Add();
+    virtual ~Notes() = default;
 };
 
 void Notes::Add()

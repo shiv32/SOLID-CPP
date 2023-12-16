@@ -25,6 +25,7 @@ public:
     virtual void Add() = 0;
     virtual void Remove() = 0;
     virtual void Edit() = 0;
+    virtual ~Notes() = default;
 };
 
 class AddContact final : public Notes
